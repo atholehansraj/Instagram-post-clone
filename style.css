@@ -1,0 +1,218 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Roboto", serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+main .main {
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+}
+main .main .heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main .heading h2 {
+  font-size: 2.5em;
+  font-family: "Satisfy", cursive;
+  font-weight: 900;
+}
+main .main .heading .head-tools i {
+  font-size: 2em;
+  padding: 0.2em;
+  cursor: pointer;
+}
+main .main .stories {
+  width: 100%;
+  display: flex;
+  overflow-y: auto;
+  gap: 0.5em;
+  padding: 1em 0;
+}
+main .main .stories .story {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .main .stories .story img {
+  height: 70px;
+  width: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgb(174, 40, 40);
+}
+main .main .stories .story h4 {
+  font-size: 0.8em;
+}
+main .main .post {
+  width: 100%;
+  padding-bottom: 9em;
+}
+main .main .post .user-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0.4em;
+}
+main .main .post .user-name .left {
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+main .main .post .user-name .left img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main .main .post .user-name .left .name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main .main .post .user-name .left .name h3 {
+  font-size: 1.2em;
+  display: inline;
+  font-weight: 900;
+}
+main .main .post .user-name .left .name img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 20px;
+  height: 20px;
+}
+main .main .post .user-name .right {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.3em;
+}
+main .main .post .user-name .right button {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+main .main .post .user-name .right img {
+  width: 20px;
+  height: 20px;
+}
+main .main .post .image {
+  width: 100%;
+}
+main .main .post .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .main .post .post-tools {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em 0;
+}
+main .main .post .post-tools .post-feature {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+main .main .post .post-tools .post-feature .like {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+main .main .post .post-tools .post-feature .like i {
+  font-size: 1.7em;
+}
+main .main .post .post-tools .post-feature .comment {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+main .main .post .post-tools .post-feature .comment i {
+  font-size: 1.7em;
+}
+main .main .post .post-tools .post-feature .share {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+main .main .post .post-tools .post-feature .share i {
+  font-size: 1.7em;
+}
+main .main .post .post-tools .post-save i {
+  font-size: 1.7em;
+  margin-right: 0.4em;
+  cursor: pointer;
+}
+main .main .post .post-detail {
+  padding: 1px 0.3em;
+  width: 100%;
+}
+main .main .post .post-detail .discription p #span {
+  font-weight: 700;
+}
+main .main .post .post-detail .comment {
+  padding-top: 0.2em;
+}
+main .main .post .post-detail .comment p {
+  opacity: 0.6;
+}
+main .main .post .post-detail .time {
+  padding-top: 0.2em;
+}
+main .main .post .post-detail .time p {
+  opacity: 0.6;
+}
+main .main footer {
+  width: 450px;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  position: fixed;
+  background-color: white;
+  padding: 0.6em 0.2em;
+}
+main .main footer .insta-tools {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+main .main footer .insta-tools img {
+  width: 33px;
+  height: 33px;
+  font-weight: 900;
+  cursor: pointer;
+}
+main .main footer .insta-tools i {
+  font-size: 2em;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
