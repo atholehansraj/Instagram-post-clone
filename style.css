@@ -62,18 +62,22 @@ main .main .stories .story img {
 main .main .stories .story h4 {
   font-size: 0.8em;
 }
-main .main .post {
+main .main .posts {
   width: 100%;
   padding-bottom: 9em;
 }
-main .main .post .user-name {
+main .main .posts .post {
+  width: 100%;
+  margin-top: 10px;
+}
+main .main .posts .post .user-name {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 0.4em;
 }
-main .main .post .user-name .left {
+main .main .posts .post .user-name .left {
   width: 100%;
   display: flex;
   justify-content: baseline;
@@ -81,37 +85,37 @@ main .main .post .user-name .left {
   gap: 0.5em;
   cursor: pointer;
 }
-main .main .post .user-name .left img {
+main .main .posts .post .user-name .left img {
   height: 60px;
   width: 60px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
 }
-main .main .post .user-name .left .name {
+main .main .posts .post .user-name .left .name {
   width: 100%;
   display: flex;
   align-items: center;
 }
-main .main .post .user-name .left .name h3 {
+main .main .posts .post .user-name .left .name h3 {
   font-size: 1.2em;
   display: inline;
   font-weight: 900;
 }
-main .main .post .user-name .left .name img {
+main .main .posts .post .user-name .left .name img {
   -o-object-fit: contain;
      object-fit: contain;
   width: 20px;
   height: 20px;
 }
-main .main .post .user-name .right {
+main .main .posts .post .user-name .right {
   width: 30%;
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 0.3em;
 }
-main .main .post .user-name .right button {
+main .main .posts .post .user-name .right button {
   font-size: 1em;
   font-weight: 700;
   padding: 5px;
@@ -120,76 +124,87 @@ main .main .post .user-name .right button {
   border: none;
   cursor: pointer;
 }
-main .main .post .user-name .right img {
+main .main .posts .post .user-name .right img {
   width: 20px;
   height: 20px;
 }
-main .main .post .image {
+main .main .posts .post .image {
   width: 100%;
+  position: relative;
 }
-main .main .post .image img {
+main .main .posts .post .image img {
+  position: relative;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .main .post .post-tools {
+main .main .posts .post .image i {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transition: all ease 0.3s;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0.7;
+}
+main .main .posts .post .post-tools {
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0.7em 0;
 }
-main .main .post .post-tools .post-feature {
+main .main .posts .post .post-tools .post-feature {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
-main .main .post .post-tools .post-feature .like {
+main .main .posts .post .post-tools .post-feature .like {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-main .main .post .post-tools .post-feature .like i {
+main .main .posts .post .post-tools .post-feature .like i {
   font-size: 1.7em;
 }
-main .main .post .post-tools .post-feature .comment {
+main .main .posts .post .post-tools .post-feature .comment {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-main .main .post .post-tools .post-feature .comment i {
+main .main .posts .post .post-tools .post-feature .comment i {
   font-size: 1.7em;
 }
-main .main .post .post-tools .post-feature .share {
+main .main .posts .post .post-tools .post-feature .share {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-main .main .post .post-tools .post-feature .share i {
+main .main .posts .post .post-tools .post-feature .share i {
   font-size: 1.7em;
 }
-main .main .post .post-tools .post-save i {
+main .main .posts .post .post-tools .post-save i {
   font-size: 1.7em;
   margin-right: 0.4em;
   cursor: pointer;
 }
-main .main .post .post-detail {
+main .main .posts .post .post-detail {
   padding: 1px 0.3em;
   width: 100%;
 }
-main .main .post .post-detail .discription p #span {
+main .main .posts .post .post-detail .discription p #span {
   font-weight: 700;
 }
-main .main .post .post-detail .comment {
+main .main .posts .post .post-detail .comment {
   padding-top: 0.2em;
 }
-main .main .post .post-detail .comment p {
+main .main .posts .post .post-detail .comment p {
   opacity: 0.6;
 }
-main .main .post .post-detail .time {
+main .main .posts .post .post-detail .time {
   padding-top: 0.2em;
 }
-main .main .post .post-detail .time p {
+main .main .posts .post .post-detail .time p {
   opacity: 0.6;
 }
 main .main footer {

@@ -70,164 +70,180 @@ main{
             }
         }
         
-        .post{
-            // height: 100%;
+        .posts{
             width: 100%;
             padding-bottom: 9em;
-
-            .user-name{
+            
+            .post{
+                // height: 100%;
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 1em 0.4em;
-
-
-                .left{
+                margin-top: 10px;
+    
+                .user-name{
                     width: 100%;
                     display: flex;
-                    justify-content: baseline;
+                    justify-content: space-between;
                     align-items: center;
-                    gap: 0.5em;
-                    cursor: pointer;
-
-                    img{
-                        height: 60px;
-                        width: 60px;
-                        object-fit: cover;
-                        // object-position: top;
-                        border-radius: 50%;
-                    }
-                    .name{
+                    padding: 1em 0.4em;
+    
+    
+                    .left{
                         width: 100%;
                         display: flex;
-                        // justify-content: center;
+                        justify-content: baseline;
                         align-items: center;
-                        h3{
-                            font-size: 1.2em;
-                            display: inline;
-                            font-weight: 900;
-                            
+                        gap: 0.5em;
+                        cursor: pointer;
     
+                        img{
+                            height: 60px;
+                            width: 60px;
+                            object-fit: cover;
+                            // object-position: top;
+                            border-radius: 50%;
+                        }
+                        .name{
+                            width: 100%;
+                            display: flex;
+                            // justify-content: center;
+                            align-items: center;
+                            h3{
+                                font-size: 1.2em;
+                                display: inline;
+                                font-weight: 900;
+                                
+        
+                            }
+                            img{
+                                object-fit:contain;
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+    
+                    .right{
+                        width: 30%;
+                        display: flex;
+                        justify-content: end;
+                        align-items: center;
+                        gap: 0.3em;
+    
+                        button{
+                            font-size: 1em;
+                            font-weight: 700;
+                            padding: 5px;
+                            margin:5px;
+                            border-radius: 8px;
+                            border: none;
+                            cursor: pointer;
                         }
                         img{
-                            object-fit:contain;
                             width: 20px;
                             height: 20px;
                         }
+    
                     }
                 }
-
-                .right{
-                    width: 30%;
-                    display: flex;
-                    justify-content: end;
-                    align-items: center;
-                    gap: 0.3em;
-
-                    button{
-                        font-size: 1em;
-                        font-weight: 700;
-                        padding: 5px;
-                        margin:5px;
-                        border-radius: 8px;
-                        border: none;
-                        cursor: pointer;
-                    }
+    
+                .image{
+                    width: 100%;
+                    position: relative;
+                    // display: flex;
+                    // justify-content: center;
+    
                     img{
-                        width: 20px;
-                        height: 20px;
+                        position: relative;
+                        width: 100%;
+                        object-fit: cover;
                     }
-
+                    i{
+                        position: absolute;
+                        color: white;
+                        top: 50%;
+                        left: 50%;
+                        transition: all ease 0.3s;
+                        transform: translate(-50%,-50%) scale(0);
+                        opacity: 0.7;
+                    }
                 }
-            }
-
-            .image{
-                width: 100%;
-                // display: flex;
-                // justify-content: center;
-
-                img{
-                    width: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            .post-tools{
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                padding: 0.7em 0;
-
-                .post-feature{
+    
+                .post-tools{
                     width: 100%;
                     display: flex;
-                    align-items: center;
-                    gap: 0.5em;
-                    .like{
+                    justify-content: space-between;
+                    padding: 0.7em 0;
+    
+                    .post-feature{
+                        width: 100%;
                         display: flex;
                         align-items: center;
-                        cursor: pointer;
-                        i{
-                            font-size: 1.7em;
+                        gap: 0.5em;
+                        .like{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            i{
+                                font-size: 1.7em;
+                            }
+                        }
+                        .comment{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            
+                            i{
+                                font-size: 1.7em;
+                            }
+                        }
+                        .share{
+                            display: flex;
+                            align-items: center;
+                            cursor: pointer;
+                            
+                            i{
+                                font-size: 1.7em;
+                            }
                         }
                     }
+    
+                    .post-save{
+    
+                        i{
+                            font-size: 1.7em;
+                            margin-right: 0.4em;
+                            cursor: pointer;
+                        }
+                    }
+    
+                }  
+                
+                .post-detail{
+                    padding: 1px 0.3em;
+                    width: 100%;
+    
+                    .discription{
+    
+                        p{
+                            #span{
+                                font-weight: 700;
+                            }
+    
+                        }
+                    }
+    
                     .comment{
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        
-                        i{
-                            font-size: 1.7em;
+                        padding-top: 0.2em;
+                        p{
+                            opacity: 0.6;
                         }
                     }
-                    .share{
-                        display: flex;
-                        align-items: center;
-                        cursor: pointer;
-                        
-                        i{
-                            font-size: 1.7em;
+                    .time{
+                        padding-top: 0.2em;
+    
+                        p{
+                            opacity: 0.6;
                         }
-                    }
-                }
-
-                .post-save{
-
-                    i{
-                        font-size: 1.7em;
-                        margin-right: 0.4em;
-                        cursor: pointer;
-                    }
-                }
-
-            }  
-            
-            .post-detail{
-                padding: 1px 0.3em;
-                width: 100%;
-
-                .discription{
-
-                    p{
-                        #span{
-                            font-weight: 700;
-                        }
-
-                    }
-                }
-
-                .comment{
-                    padding-top: 0.2em;
-                    p{
-                        opacity: 0.6;
-                    }
-                }
-                .time{
-                    padding-top: 0.2em;
-
-                    p{
-                        opacity: 0.6;
                     }
                 }
             }
