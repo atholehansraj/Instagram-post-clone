@@ -93,13 +93,13 @@ function postFun() {
                 </div>
             </div>
             <div class="image">
-                <img id="${index}" src="${val.userPost}" alt="">
+                <img  " src="${val.userPost}" alt="">
                 <i class="ri-heart-fill"></i>
             </div>
             <div class="post-tools">
                 <div class="post-feature">
-                    <div class="like" id=${index} >
-                        ${val.like ? `<i  style="color : 'red' "  class="ri-heart-fill"></i>` : `<i class="ri-heart-line"></i>`}
+                    <div class="like"  >
+                        <span id=${index} >${val.like ? `<i  style="color :red"  class="ri-heart-fill"></i>` : `<i class="ri-heart-line"></i>`}</span>
                         <p>${val.likeCount}</p>
                     </div>
                     <div class="comment">
@@ -136,64 +136,79 @@ function postFun() {
 postFun()
 
 
- 
-function likepostbyicon(){
-    let posts = document.querySelector(".posts ")
-    posts.addEventListener('click', function(e) {
+let posts = document.querySelector(".posts");
+posts.addEventListener("click",function(dets){
+    // console.log(user[dets.target.id].like);
+
+    if(user[dets.target.id].like){
+      user[dets.target.id].like = false
+      user[dets.target.id].likeCount--
+      
+    }else{
+      user[dets.target.id].like = true;
+      user[dets.target.id].likeCount++;
+
+    }
+    
+    postFun()
+})
+
+
+
+
+// function likepostbyicon(){
+//     let posts = document.querySelector(".posts ")
+//     posts.addEventListener('click', function(e) {
         
-        // console.log(e.target.parentElement.className === "like");
+//         // console.log(e.target.parentElement.className === "like");
 
         
-        // console.log(user[e.target.parentElement.id])
-        let icon = e.target
+//         // console.log(user[e.target.parentElement.id])
+//         let icon = e.target
 
-        if (e.target.parentElement.className === "like"){
-                if(user[e.target.parentElement.id].like == true){
-                    user[e.target.parentElement.id].likeCount --
-                    user[e.target.parentElement.id].like = false
+//         if (e.target.parentElement.className === "like"){
+//                 if(user[e.target.parentElement.id].like == true){
+//                     user[e.target.parentElement.id].likeCount --
+//                     user[e.target.parentElement.id].like = false
             
-                }
-                else{
-                    user[e.target.parentElement.id].likeCount ++
-                    user[e.target.parentElement.id].like = true
+//                 }
+//                 else{
+//                     user[e.target.parentElement.id].likeCount ++
+//                     user[e.target.parentElement.id].like = true
             
-                }
-    }   
+//                 }
+//     }   
     
-        postFun()
+//         postFun()
     
-    });
+//     });
     
-}
-likepostbyicon()
+// }
+// likepostbyicon()
 
-   
+// function likepostbyimage(){
 
-
-
-function likepostbyimage(){
-
-    let posts = document.querySelector(".posts ")
-    posts.addEventListener('click', function(e) {
-
-        if (e.target.parentElement.className === "image"){
-                if(user[e.target.id].like == true){
-                    user[e.target.id].likeCount --
-                    user[e.target.id].like = false
+//     let posts = document.querySelector(".posts ")
+//     posts.addEventListener('dblclick', function(e) {
+//         console.log("ok")
+//         if (e.target.parentElement.className === "image"){
+//                 if(user[e.target.id].like == true){
+//                     user[e.target.id].likeCount --
+//                     user[e.target.id].like = false
             
-                }
-                else{
-                    user[e.target.id].likeCount ++
-                    user[e.target.id].like = true
+//                 }
+//                 else{
+//                     user[e.target.id].likeCount ++
+//                     user[e.target.id].like = true
             
-                }
+//                 }
                 
-        }   
+//         }   
     
-        postFun()
+//         postFun()
     
-    });
+//     });
 
 
-}
-likepostbyimage();
+// }
+// likepostbyimage();

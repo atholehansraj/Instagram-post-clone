@@ -166,6 +166,7 @@ main .main .posts .post .post-tools .post-feature .like {
 }
 main .main .posts .post .post-tools .post-feature .like i {
   font-size: 1.7em;
+  pointer-events: none;
 }
 main .main .posts .post .post-tools .post-feature .comment {
   display: flex;
