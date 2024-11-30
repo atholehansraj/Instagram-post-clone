@@ -92,7 +92,7 @@ function postFun() {
                     <img src="./three-dots.png" alt="">
                 </div>
             </div>
-            <div class="image">
+            <div class="image" id="${index+10}}">
                 <img  " src="${val.userPost}" alt="">
                 <i class="ri-heart-fill"></i>
             </div>
@@ -112,7 +112,7 @@ function postFun() {
                     </div>
                 </div>
                 <div class="post-save">
-                    <i class="ri-save-line"></i>
+                    <i class="ri-bookmark-line"></i>
                 </div>
             </div>
             <div class="post-detail">
@@ -156,7 +156,179 @@ posts.addEventListener("click",function(dets){
 
 
 
+
 // function likepostbyicon(){
+//     let posts = document.querySelector(".posts ")
+//     posts.addEventListener('click', function(e) {
+        
+//         // console.log(e.target.parentElement.className === "like");
+
+        
+//         // console.log(user[e.target.parentElement.id])
+//         let icon = e.target
+
+//         if (e.target.parentElement.className === "like"){
+//                 if(user[e.target.parentElement.id].like == true){
+//                     user[e.target.parentElement.id].likeCount --
+//                     user[e.target.parentElement.id].like = false
+            
+//                 }
+//                 else{
+//                     user[e.target.parentElement.id].likeCount ++
+//                     user[e.target.parentElement.id].like = true
+            
+//                 }
+//     }   
+    
+//         postFun()
+    
+//     });
+    
+// }
+// likepostbyicon()
+
+// function likepostbyimage(){
+
+//     let posts = document.querySelector(".posts ")
+//     posts.addEventListener('click', function(e) {
+//         console.log("ok")
+//         if (e.target.parentElement.className === "image"){
+//                 if(user[e.target.id].like == true){
+//                     user[e.target.id].likeCount --
+//                     user[e.target.id].like = false
+            
+//                 }
+//                 else{
+//                     user[e.target.id].likeCount ++
+//                     user[e.target.id].like = true
+            
+//                 }
+                
+//         }   
+    
+//         postFun()
+    
+//     });
+
+
+// }
+// likepostbyimage();
+
+
+let storyData = [{
+  username: "Your Story",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1524638431109-93d95c968f03?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1524638431109-93d95c968f03?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  
+  },{
+    username: "janu_roy",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1518102439785-01f8b89b00b1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1518518873111-6ca469aa4560?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "triweni_mohod",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1521567097888-2c5fc40a8660?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://plus.unsplash.com/premium_photo-1691030256047-2e77a72f7f63?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "kittu.love",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1694043360391-5eafd4ab1065?q=80&w=1826&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1696377596717-435eb8969993?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "josephin",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1690330906539-780d441dcaa2?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1683184673811-5b87198a78f6?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "sara_jay",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1668238226906-03e306554f13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1668238226906-03e306554f13?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "shraddha.dho",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1512310604669-443f26c35f52?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1512310604669-443f26c35f52?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "dipeeka.gonde",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://plus.unsplash.com/premium_photo-1669824376679-268d3739acf3?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://plus.unsplash.com/premium_photo-1669824376679-268d3739acf3?q=80&w=1895&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "Nicole Geri",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1513490169789-fc38712bf75d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1513490169789-fc38712bf75d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },{
+    username: "nileema.sose",
+  userlocation: "Paris, France",
+  userprofile:
+    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+
+   story :"https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+  
+]
+
+let stories = document.querySelector(".stories")
+let clutter =''
+storyData.forEach(function(elem,idx){
+  clutter +=`<div class="story">
+                <img id="${idx}" src="${elem.userprofile}" alt="">
+                <h4>${elem.username}</h4>
+            </div>`
+})
+
+stories.innerHTML = clutter
+
+let showStory = document.querySelector(".show-story")
+
+stories.addEventListener("click",function(val){
+
+    let username = document.querySelector(".show-story .left h3")
+    let userProfile = document.querySelector(".show-story .story .user-name img")
+    let story = document.querySelector(".show-story .status img")
+    let main = document.querySelector("main")
+
+    username.textContent = storyData[val.target.id].username
+    userProfile.src = storyData[val.target.id].userprofile
+    story.src = storyData[val.target.id].story
+
+  if(storyData[val.target.id]){
+    showStory.style.display = "block"
+    main.style.display = "none"
+
+
+    let close= document.querySelector(".story .right button")
+    close.addEventListener("click",function(){
+      showStory.style.display = "none"
+      main.style.display = "block"
+    })
+  }
+
+    
+})
+
+
 //     let posts = document.querySelector(".posts ")
 //     posts.addEventListener('click', function(e) {
         

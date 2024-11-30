@@ -10,16 +10,131 @@ html, body {
   width: 100%;
 }
 
+.show-story {
+  height: 100%;
+  width: 450px;
+  background-color: rgba(69, 69, 69, 0.919);
+  position: absolute;
+  z-index: 999;
+  display: none;
+  position: fixed;
+}
+.show-story .story {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.show-story .story .user-name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.7em 0.4em;
+  background-color: rgba(45, 44, 44, 0.919);
+  color: white;
+}
+.show-story .story .user-name .left {
+  width: 100%;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+}
+.show-story .story .user-name .left img {
+  height: 60px;
+  width: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.show-story .story .user-name .left .name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.show-story .story .user-name .left .name h3 {
+  font-size: 1.2em;
+  display: inline;
+  font-weight: 900;
+}
+.show-story .story .user-name .left .name img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 20px;
+  height: 20px;
+}
+.show-story .story .user-name .right {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 1.4em;
+}
+.show-story .story .user-name .right #more {
+  font-size: 1.5em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.show-story .story .user-name .right button {
+  font-size: 1em;
+  font-weight: 700;
+  padding: 5px;
+  margin: 5px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.show-story .story .user-name .right button i {
+  font-weight: 900;
+  font-size: 1.5em;
+  color: #fff;
+}
+.show-story .story img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.show-story .story .comment {
+  width: 100%;
+  padding: 0 1.5em 0.3em 0.8em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.show-story .story .comment input {
+  width: 80%;
+  height: 6vh;
+  border-radius: 3rem;
+  padding: 0 1em;
+  font-size: 1.4em;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+}
+.show-story .story .comment i {
+  font-size: 2em;
+  font-weight: 400;
+  cursor: pointer;
+}
+
 main {
   height: 100%;
   width: 450px;
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
 main .main {
   height: 100%;
   width: 100%;
   padding: 1em;
+  position: relative;
 }
 main .main .heading {
   width: 100%;
@@ -43,6 +158,9 @@ main .main .stories {
   overflow-y: auto;
   gap: 0.5em;
   padding: 1em 0;
+}
+main .main .stories::-webkit-scrollbar {
+  display: none;
 }
 main .main .stories .story {
   width: 100px;
