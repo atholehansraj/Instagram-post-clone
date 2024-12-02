@@ -5,4 +5,5 @@ This project is a simplified Instagram clone built using HTML, SCSS, and pure Ja
 ❤️ Post Like/Dislike functionality
 
 📚 Interactive Story feature
+
 This project serves as a great example of using modern web technologies to recreate essential social media components. Feel free to explore, learn, and contribute!
